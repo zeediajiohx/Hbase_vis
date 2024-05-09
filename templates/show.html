@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mytitle</title>
+    <script src="../static/javascrip/jquery.js"></script>
+</head>
+<body>
+<h1>mybody</h1>
+<button >bblb</button>
+<script>
+    $("button").click(function(){
+       $.ajax({
+           url:"/ajax",
+           type:"post",
+           data:{"name":"lisi","score":99},
+           success:function(d){
+               $("h1").html("whjy"+d)
+           },error:function(){
+             alert("fssbla")
+             }
+             })
+             })
+
+</script>
+</body>
+</html>
